@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+    <title>Meu Projeto</title>
+</head>
+<body>
+
+    <header>
+        <h1>Meu Projeto</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showScreen('main-screen')">Home</a>
+        <a href="#" onclick="showScreen('admin-screen')">Área Administrativa</a>
+        <a href="#" onclick="showScreen('contact-screen')">Contato</a>
+    </nav>
+
+    <div class="container">
+        <!-- Tela Principal -->
+        <div id="main-screen">
+            <h2>Mensagens Recebidas</h2>
+            <p>Sem mensagens no momento.</p>
+        </div>
+
+        <!-- Tela de Área Administrativa -->
+        <div id="admin-screen">
+            <h2>Área Administrativa</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="button" onclick="adminLogin()">Entrar</button>
+            </form>
+        </div>
+
+        <!-- Tela de Contato -->
+        <div id="contact-screen">
+            <h2>Contato</h2>
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensagem" required></textarea>
+                <button type="button" onclick="sendContact()">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
